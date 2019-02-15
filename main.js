@@ -7,21 +7,44 @@ let car = {
     isworking: true,
 
     drivetowork(){
-        alert('Old Mileage: ${this.mileage}');
-        this.mileage = this.mileage +10
-        alert('New Mileage: ${this.mileage}');
+        alert(`Old Mileage: ${this.mileage}`);
+     this.mileage += 10;
+        alert(`New Mileage: ${this.mileage}`);
     }
+    
+    drivearoundusa(){
+        alert(`Old Mileage: ${this.mileage}`);
+     this.mileage += 7000;
+        alert(`New Mileage: ${this.mileage}`);
+        alert('Car needs a tuneup');
+        this.isworking= false;
+    },
+
+    gettuneup(){
+        alert('Car is fixed and ready to go')
+        this.isworking=true;
+    },
+
+    honk(){
+        alert('Beep,Beep');
+    }
+
 }
 
 //Functions
 //logs all our car's current stats to the console
-const rewritestats() => {
-
+const rewritestats=()=>{
+    console.log(`Make: ${car.make}`);
+    console.log(`Model: ${car.model}`);
+    console.log(`Color: ${car.color}`);
+    console.log(`Mileage: ${car.mileage}`);
+   console.log("---------------------------------------------------------------------")
 }
 
 //Main Process
 //Captures keyboard input depending on the letter pressed it will call different functions
-const document.onkeyup(event) => {
+document.onkeyup = (event) => {
+   
     //Captures the key press, converts it to a lowercase, and saves it to variavle
     let letter = string.fromCharCode(event.keycode)toLoweCase();
 
@@ -29,4 +52,16 @@ const document.onkeyup(event) => {
         car.drivetowork();
         rewritestats();
     }
+    if (letter === 'r'){
+        car.drivearoundusa();
+        rewritestats(); 
+    
+    }
+    if (letter === 't'){
+        car.gettuneup();
+        rewritestats(); 
+    }
+    if (letter === 'h'){
+        car.honk();
+        rewritestats();
 }
