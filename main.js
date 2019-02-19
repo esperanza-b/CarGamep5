@@ -45,7 +45,7 @@ const rewritestats=()=>{
 //Captures keyboard input depending on the letter pressed it will call different functions
 document.onkeyup = (event) => {
    
-    //Captures the key press, converts it to a lowercase, and saves it to variavle
+    //Captures the key press, converts it to a lowercase, and saves it to variable
     let letter = string.fromCharCode(event.keycode)toLowerCase();
 
     if (letter === 'd'){
