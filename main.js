@@ -46,7 +46,7 @@ const rewritestats=()=>{
 document.onkeyup = (event) => {
    
     //Captures the key press, converts it to a lowercase, and saves it to variavle
-    let letter = string.fromCharCode(event.keycode)toLoweCase();
+    let letter = string.fromCharCode(event.keycode)toLowerCase();
 
     if (letter === 'd'){
         car.drivetowork();
