@@ -1,8 +1,8 @@
-//Variables
+//VARIABLES
 let car = {
-    make: "Ferrari",
-    model:"458 italia spider",
-    color:"black",
+    make: 'Ferrari',
+    model:'458 italia spider',
+    color:'black',
     mileage:0,
     isworking: true,
 
@@ -10,7 +10,7 @@ let car = {
         alert(`Old Mileage: ${this.mileage}`);
      this.mileage += 10;
         alert(`New Mileage: ${this.mileage}`);
-    }
+    },
     
     drivearoundusa(){
         alert(`Old Mileage: ${this.mileage}`);
@@ -26,27 +26,28 @@ let car = {
     },
 
     honk(){
-        alert('Beep,Beep');
+        alert("Beep,Beep");
     }
 
-}
+};
 
-//Functions
+//FUNCTIONS
 //logs all our car's current stats to the console
-const rewritestats=()=>{
+ rewritestats=()=>{
     console.log(`Make: ${car.make}`);
     console.log(`Model: ${car.model}`);
     console.log(`Color: ${car.color}`);
     console.log(`Mileage: ${car.mileage}`);
-   console.log("---------------------------------------------------------------------")
+    console.log(`IsWorking: ${car.isWorking}`);
+    console.log("---------------------------------------------------------------------")
 }
 
-//Main Process
+//MAIN PROCESS
 //Captures keyboard input depending on the letter pressed it will call different functions
 document.onkeyup = (event) => {
    
     //Captures the key press, converts it to a lowercase, and saves it to variable
-    let letter = string.fromCharCode(event.keycode)toLowerCase();
+    let letter = String.fromCharCode(event.keyCode).toLowerCase();
 
     if (letter === 'd'){
         car.drivetowork();
