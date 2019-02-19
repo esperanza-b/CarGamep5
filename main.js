@@ -61,8 +61,9 @@ document.onkeyup = (event) => {
     if (letter === 't'){
         car.gettuneup();
         rewritestats(); 
-    }
+    };
     if (letter === 'h'){
         car.honk();
         rewritestats();
+    }
 }
